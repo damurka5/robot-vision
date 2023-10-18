@@ -99,6 +99,21 @@ robot_vision_EXTERNAL_OBJECTS =
 
 robot_vision: CMakeFiles/robot_vision.dir/main.cpp.o
 robot_vision: CMakeFiles/robot_vision.dir/build.make
+robot_vision: /usr/local/lib/libopencv_gapi.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_highgui.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_ml.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_objdetect.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_photo.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_stitching.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_video.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_videoio.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_imgcodecs.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_dnn.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_calib3d.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_features2d.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_flann.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_imgproc.4.8.0.dylib
+robot_vision: /usr/local/lib/libopencv_core.4.8.0.dylib
 robot_vision: CMakeFiles/robot_vision.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable robot_vision"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_vision.dir/link.txt --verbose=$(VERBOSE)
