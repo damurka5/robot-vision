@@ -8,8 +8,8 @@ using namespace std;
 
 #define OBJ_AREA 13200
 
-Mat imgGray, imgBlur, imgCanny, imgDil, imgErode;
-Mat imgEdged, mask;
+Mat imgGray, imgBlurL, imgBlurR, imgCannyL, imgCannyR, imgDilL, imgDilR, imgErode;
+Mat imgEdged, maskL, maskR;
 
 int canny_threshold1 = 5, dilKernel1 = 1, min = 0;
 int canny_threshold2 = 100, blurSize = 3, max = 255;
@@ -48,20 +48,20 @@ Point getContourOfObj(Mat imgDil, Mat img){
 
     float peri = arcLength(myObj, true);
     approxPolyDP(myObj, conPoly[0], 0.02 * peri, true);
-
+    cout << objectType << endl;
 
     // object detection
     boundRect = boundingRect(conPoly[0]);
 
-    cout << objectType << endl;
+
     drawContours(img, conPoly, -1, Scalar(255, 0, 255), 2);
 
     rectangle(img, boundRect.tl(), boundRect.br(), Scalar(0, 255, 0), 5);
-    putText(img, objectType, {boundRect.tl().x, boundRect.tl().y - 5}, FONT_HERSHEY_PLAIN, 3, Scalar(0, 0, 255), 2);
+//    putText(img, objectType, {boundRect.tl().x, boundRect.tl().y - 5}, FONT_HERSHEY_PLAIN, 3, Scalar(0, 0, 255), 2);
 
     Point objCenter(boundRect.tl().x + (boundRect.br().x - boundRect.tl().x) / 2,
                     boundRect.tl().y + (boundRect.br().y - boundRect.tl().y) / 2);
-    circle(img, objCenter, 5, (0, 0, 0), 2);
+    circle(img, objCenter, 3, (0, 0, 0), 3);
 
     return Point(boundRect.tl().x + (boundRect.br().x-boundRect.tl().x)/2,
                  boundRect.tl().y + (boundRect.br().y-boundRect.tl().y)/2);
@@ -80,24 +80,40 @@ int main() {
     float b_x = 100; // baseline in mm
 
     vector<Mat> channels;
-    Mat hsv;
-    cvtColor(imgL, hsv, COLOR_BGR2HSV);
+    Mat hsvL, hsvR;
+    cvtColor(imgL, hsvL, COLOR_BGR2HSV);
+    cvtColor(imgR, hsvR, COLOR_BGR2HSV);
 
     Scalar lower(16, 0, 0);
-    Scalar upper(175, 255, 255);
-    inRange(hsv, lower, upper, mask);
+    Scalar upper(175, 255, 255); // 175, 255, 255
+    inRange(hsvL, lower, upper, maskL);
+    inRange(hsvR, lower, upper, maskR);
 
-    GaussianBlur(mask, imgBlur, Size(5, 5), 0, 0);
+    GaussianBlur(maskL, imgBlurL, Size(7, 7), 0, 0);
+    GaussianBlur(maskR, imgBlurR, Size(7, 7), 0, 0);
 
     canny_threshold1 = 200; // empirically
-    Canny(imgBlur, imgCanny, canny_threshold1, 3 * canny_threshold1);
-    Mat kernel = getStructuringElement(MORPH_RECT, Size(5, 5));
-    dilate(imgCanny, imgDil, kernel);
+    Canny(imgBlurL, imgCannyL, canny_threshold1, 3 * canny_threshold1);
+    Mat kernelL = getStructuringElement(MORPH_RECT, Size(5, 5));
+    dilate(imgCannyL, imgDilL, kernelL);
 
-    Point p = getContourOfObj(imgDil, imgL); // i=4 for left_pic4, i = 6 for middle_pic4
+    Canny(imgBlurR, imgCannyR, canny_threshold1, 3 * canny_threshold1);
+    Mat kernelR = getStructuringElement(MORPH_RECT, Size(5, 5));
+    dilate(imgCannyR, imgDilR, kernelR);
+
+    Point pLeft = getContourOfObj(imgDilL, imgL);
+    Point pRight = getContourOfObj(imgDilR, imgR);
 
     imshow("Image Left", imgL);
-    cout << "x: " << p.x << " y: " << p.y << "\n";
+    imshow("Image Right", imgR);
+    cout << "Left x: " << pLeft.x << " Left y: " << pLeft.y << "\n";
+    cout << "Right x: " << pRight.x << " Right y: " << pRight.y << "\n";
+
+    float alpha = 0.0590909; // coefficient to get disparity
+    float disparity =alpha*(pLeft.x - pRight.x);
+
+    float depth = (float) f*b_x / (float) disparity;
+    cout<<"Depth is: "<<depth;
 
     waitKey(0);
 
