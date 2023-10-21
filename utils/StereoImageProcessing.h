@@ -16,6 +16,7 @@ class StereoImageProcessing {
 public:
     static bool compareContourAreas(std::vector<cv::Point> contour1, std::vector<cv::Point> contour2);
     static cv::Point getContourOfObj(cv::Mat imgDil, cv::Mat img);
+    static  cv::Mat applyDilation(cv::Mat src, cv::Mat res, int cannyThreshold1, int cannyThreshold2, int blurKernel, int dilationKernel);
 };
 
 

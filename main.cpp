@@ -12,7 +12,7 @@ using namespace std;
 Mat imgGray, imgBlurL, imgBlurR, imgCannyL, imgCannyR, imgDilL, imgDilR, imgErode;
 Mat imgEdged, maskL, maskR;
 
-int canny_threshold1 = 5;
+int canny_threshold1 = 200;
 
 
 int main() {
@@ -36,18 +36,10 @@ int main() {
     inRange(hsvL, lower, upper, maskL);
     inRange(hsvR, lower, upper, maskR);
 
-    GaussianBlur(maskL, imgBlurL, Size(7, 7), 0, 0);
-    GaussianBlur(maskR, imgBlurR, Size(7, 7), 0, 0);
-
     canny_threshold1 = 200; // empirically
-    Canny(imgBlurL, imgCannyL, canny_threshold1, 3 * canny_threshold1);
-    Mat kernelL = getStructuringElement(MORPH_RECT, Size(5, 5));
-    dilate(imgCannyL, imgDilL, kernelL);
 
-    Canny(imgBlurR, imgCannyR, canny_threshold1, 3 * canny_threshold1);
-    Mat kernelR = getStructuringElement(MORPH_RECT, Size(5, 5));
-    dilate(imgCannyR, imgDilR, kernelR);
-
+    imgDilL = StereoImageProcessing::applyDilation(maskL, imgDilL, canny_threshold1, 3*canny_threshold1, 7,5);
+    imgDilR = StereoImageProcessing::applyDilation(maskR, imgDilR, canny_threshold1, 3*canny_threshold1, 7,5);
     Point pLeft = StereoImageProcessing::getContourOfObj(imgDilL, imgL);
     Point pRight = StereoImageProcessing::getContourOfObj(imgDilR, imgR);
 

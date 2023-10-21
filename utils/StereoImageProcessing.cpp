@@ -61,3 +61,13 @@ cv::Point StereoImageProcessing::getContourOfObj(cv::Mat imgDil, cv::Mat img) {
     return Point(boundRect.tl().x + (boundRect.br().x-boundRect.tl().x)/2,
                  boundRect.tl().y + (boundRect.br().y-boundRect.tl().y)/2);
 }
+
+cv::Mat StereoImageProcessing::applyDilation(cv::Mat src, cv::Mat res, int cannyThreshold1, int cannyThreshold2, int blurKernel, int dilationKernel) {
+    Mat blured, canny;
+    GaussianBlur(src, blured, Size(blurKernel, blurKernel), 0, 0);
+    Canny(blured, canny, cannyThreshold1, cannyThreshold2);
+    Mat kernel = getStructuringElement(MORPH_RECT, Size(dilationKernel, dilationKernel));
+    dilate(canny, res, kernel);
+    return res;
+}
+
