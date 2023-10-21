@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/main.cpp" "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles/robot_vision.dir/main.cpp.o"
+  "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/utils/StereoImageProcessing.cpp" "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

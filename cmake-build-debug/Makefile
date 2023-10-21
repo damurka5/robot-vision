@@ -170,6 +170,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+utils/StereoImageProcessing.o: utils/StereoImageProcessing.cpp.o
+
+.PHONY : utils/StereoImageProcessing.o
+
+# target to build an object file
+utils/StereoImageProcessing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o
+.PHONY : utils/StereoImageProcessing.cpp.o
+
+utils/StereoImageProcessing.i: utils/StereoImageProcessing.cpp.i
+
+.PHONY : utils/StereoImageProcessing.i
+
+# target to preprocess a source file
+utils/StereoImageProcessing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.i
+.PHONY : utils/StereoImageProcessing.cpp.i
+
+utils/StereoImageProcessing.s: utils/StereoImageProcessing.cpp.s
+
+.PHONY : utils/StereoImageProcessing.s
+
+# target to generate assembly for a file
+utils/StereoImageProcessing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.s
+.PHONY : utils/StereoImageProcessing.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +209,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... utils/StereoImageProcessing.o"
+	@echo "... utils/StereoImageProcessing.i"
+	@echo "... utils/StereoImageProcessing.s"
 .PHONY : help
 
 

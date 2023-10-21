@@ -85,6 +85,12 @@
 		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/main.cpp">
 			<Option target="robot_vision"/>
 		</Unit>
+		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/utils/StereoImageProcessing.cpp">
+			<Option target="robot_vision"/>
+		</Unit>
+		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/utils/StereoImageProcessing.h">
+			<Option target="robot_vision"/>
+		</Unit>
 		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
