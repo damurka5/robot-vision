@@ -3,6 +3,8 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 #include <iostream>
+#include <opencv2/calib3d.hpp>
+
 using namespace cv;
 using namespace std;
 
@@ -110,10 +112,22 @@ int main() {
     cout << "Right x: " << pRight.x << " Right y: " << pRight.y << "\n";
 
     float alpha = 0.0590909; // coefficient to get disparity
-    float disparity =alpha*(pLeft.x - pRight.x);
+    float disparity = pLeft.x - pRight.x;
 
-    float depth = (float) f*b_x / (float) disparity;
+    float depth = (float) f*b_x /( (float) alpha*disparity);
     cout<<"Depth is: "<<depth;
+
+    // disparity map calculations
+    imgL = imread(path1);
+    imgR = imread(path2);
+    Mat disparityMap, imgGrayL, imgGrayR;
+    Ptr<StereoBM> sbm = StereoBM::create( 16*8, 35);
+    cvtColor(imgL, imgGrayL, COLOR_BGR2GRAY);
+    cvtColor(imgR, imgGrayR, COLOR_BGR2GRAY);
+
+    sbm->compute(imgGrayL, imgGrayR, disparityMap);
+    imshow("Disparity", disparityMap);
+
 
     waitKey(0);
 
