@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robot_vision.dir/main.cpp.o"
-  "CMakeFiles/robot_vision.dir/main.cpp.o.d"
-  "CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o"
-  "CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o.d"
+  "CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o"
+  "CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o.d"
   "robot_vision"
   "robot_vision.pdb"
 )

@@ -69,44 +69,28 @@ include CMakeFiles/robot_vision.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/robot_vision.dir/flags.make
 
-CMakeFiles/robot_vision.dir/main.cpp.o: CMakeFiles/robot_vision.dir/flags.make
-CMakeFiles/robot_vision.dir/main.cpp.o: /Users/damirnurtdinov/Desktop/My\ Courses/Диплом/robot_vision/main.cpp
-CMakeFiles/robot_vision.dir/main.cpp.o: CMakeFiles/robot_vision.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robot_vision.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/robot_vision.dir/main.cpp.o -MF CMakeFiles/robot_vision.dir/main.cpp.o.d -o CMakeFiles/robot_vision.dir/main.cpp.o -c "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/main.cpp"
+CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o: CMakeFiles/robot_vision.dir/flags.make
+CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o: /Users/damirnurtdinov/Desktop/My\ Courses/Диплом/robot_vision/qr/qr_finding_1.cpp
+CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o: CMakeFiles/robot_vision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o -MF CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o.d -o CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o -c "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/qr/qr_finding_1.cpp"
 
-CMakeFiles/robot_vision.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/robot_vision.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/main.cpp" > CMakeFiles/robot_vision.dir/main.cpp.i
+CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/qr/qr_finding_1.cpp" > CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.i
 
-CMakeFiles/robot_vision.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/robot_vision.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/main.cpp" -o CMakeFiles/robot_vision.dir/main.cpp.s
-
-CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o: CMakeFiles/robot_vision.dir/flags.make
-CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o: /Users/damirnurtdinov/Desktop/My\ Courses/Диплом/robot_vision/utils/StereoImageProcessing.cpp
-CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o: CMakeFiles/robot_vision.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o -MF CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o.d -o CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o -c "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/utils/StereoImageProcessing.cpp"
-
-CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/utils/StereoImageProcessing.cpp" > CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.i
-
-CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/utils/StereoImageProcessing.cpp" -o CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.s
+CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/qr/qr_finding_1.cpp" -o CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.s
 
 # Object files for target robot_vision
 robot_vision_OBJECTS = \
-"CMakeFiles/robot_vision.dir/main.cpp.o" \
-"CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o"
+"CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o"
 
 # External object files for target robot_vision
 robot_vision_EXTERNAL_OBJECTS =
 
-robot_vision: CMakeFiles/robot_vision.dir/main.cpp.o
-robot_vision: CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o
+robot_vision: CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o
 robot_vision: CMakeFiles/robot_vision.dir/build.make
 robot_vision: /usr/local/lib/libopencv_gapi.4.8.0.dylib
 robot_vision: /usr/local/lib/libopencv_highgui.4.8.0.dylib
@@ -124,7 +108,7 @@ robot_vision: /usr/local/lib/libopencv_flann.4.8.0.dylib
 robot_vision: /usr/local/lib/libopencv_imgproc.4.8.0.dylib
 robot_vision: /usr/local/lib/libopencv_core.4.8.0.dylib
 robot_vision: CMakeFiles/robot_vision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable robot_vision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable robot_vision"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_vision.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

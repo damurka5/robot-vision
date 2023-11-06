@@ -6,9 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories( ${OpenCV_INCLUDE_DIRS})
 
-add_executable(robot_vision main.cpp
-        utils/StereoImageProcessing.cpp
-        utils/StereoImageProcessing.h
-        )
+# add_executable(robot_vision main.cpp
+#         utils/StereoImageProcessing.cpp
+#         utils/StereoImageProcessing.h
+#         )
+add_executable(robot_vision qr/qr_finding_1.cpp)
 
 target_link_libraries( robot_vision  ${OpenCV_LIBS})

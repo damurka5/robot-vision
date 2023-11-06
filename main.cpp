@@ -71,6 +71,5 @@ int main() {
     imshow("Disparity", disparityMap);
 
     waitKey(0);
-
 }
 
