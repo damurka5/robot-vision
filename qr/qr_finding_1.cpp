@@ -8,6 +8,24 @@
 using namespace cv;
 using namespace std;
 
+void drawContour(Mat src, Mat points) {
+
+    Point intPoints[4];
+    for (int i = 0; i < 4; i++){
+        intPoints[i] = Point((int) points.at<float>(i*2), (int) points.at<float>(i*2 + 1));
+        cout<<intPoints[i];
+    }
+
+    int thickness = 3; 
+    auto colour = Scalar(0, 0, 255);
+
+    line(src, intPoints[0],  intPoints[1], colour, thickness);
+    line(src, intPoints[1],  intPoints[2], colour, thickness);
+    line(src, intPoints[2],  intPoints[3], colour, thickness);
+    line(src, intPoints[3],  intPoints[0], colour, thickness);
+
+}
+
 int main() {
     string path1 = "../resources/qr1.jpg";
 
@@ -21,8 +39,13 @@ int main() {
     cout << "detection_result: " << result << endl;
 
     String link  = detector.detectAndDecode(qr_img, points, qr_detected);
-    cout<<link;
-    imshow("QR", qr_detected);
+    for(int i=0;i<8;++i)
+    {
+        cout<<(int) points.at<float>(i)<<"\n";
+    }
+
+    drawContour(qr_img, points);
+    imshow("QR", qr_img);
 
     waitKey(0);
 }
