@@ -1,0 +1,3 @@
+/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles/robot_vision.dir
+/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles/edit_cache.dir
+/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles/rebuild_cache.dir
