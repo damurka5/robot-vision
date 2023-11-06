@@ -27,25 +27,30 @@ void drawContour(Mat src, Mat points) {
 }
 
 int main() {
-    string path1 = "../resources/qr1.jpg";
+    VideoCapture cap(0);
+    while (true){
+        
+        // string path1 = "../resources/qr1.jpg";
 
-    Mat qr_img = imread(path1);
-    Mat qr_detected;
+        // Mat qr_img = imread(path1);
+        Mat qr_img;
+        cap.read(qr_img);
+        Mat qr_detected;
 
-    auto detector = QRCodeDetector();
+        auto detector = QRCodeDetector();
 
-    Mat points;
-    bool result = detector.detect(qr_img, points);
-    cout << "detection_result: " << result << endl;
+        Mat points;
+        bool result = detector.detect(qr_img, points);
+        cout << "detection_result: " << result << endl;
 
-    String link  = detector.detectAndDecode(qr_img, points, qr_detected);
-    for(int i=0;i<8;++i)
-    {
-        cout<<(int) points.at<float>(i)<<"\n";
+        String link  = detector.detectAndDecode(qr_img, points, qr_detected);
+        // for(int i=0;i<8;++i)
+        // {
+        //     cout<<(int) points.at<float>(i)<<"\n";
+        // }
+        if (result>0) drawContour(qr_img, points);
+        imshow("QR", qr_img);
+
+        waitKey(1);
     }
-
-    drawContour(qr_img, points);
-    imshow("QR", qr_img);
-
-    waitKey(0);
 }
