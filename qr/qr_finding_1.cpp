@@ -27,7 +27,7 @@ void drawContour(Mat src, Mat points) {
 }
 
 int main() {
-    VideoCapture cap(0);
+    VideoCapture cap(1);
     while (true){
         
         // string path1 = "../resources/qr1.jpg";

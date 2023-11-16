@@ -192,7 +192,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "qr/qr_finding_1.cpp",
+			"path" : "aruco/aruco1.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

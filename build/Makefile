@@ -129,29 +129,29 @@ robot_vision/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/build
 .PHONY : robot_vision/fast
 
-qr/qr_finding_1.o: qr/qr_finding_1.cpp.o
-.PHONY : qr/qr_finding_1.o
+aruco/aruco1.o: aruco/aruco1.cpp.o
+.PHONY : aruco/aruco1.o
 
 # target to build an object file
-qr/qr_finding_1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o
-.PHONY : qr/qr_finding_1.cpp.o
+aruco/aruco1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o
+.PHONY : aruco/aruco1.cpp.o
 
-qr/qr_finding_1.i: qr/qr_finding_1.cpp.i
-.PHONY : qr/qr_finding_1.i
+aruco/aruco1.i: aruco/aruco1.cpp.i
+.PHONY : aruco/aruco1.i
 
 # target to preprocess a source file
-qr/qr_finding_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.i
-.PHONY : qr/qr_finding_1.cpp.i
+aruco/aruco1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.i
+.PHONY : aruco/aruco1.cpp.i
 
-qr/qr_finding_1.s: qr/qr_finding_1.cpp.s
-.PHONY : qr/qr_finding_1.s
+aruco/aruco1.s: aruco/aruco1.cpp.s
+.PHONY : aruco/aruco1.s
 
 # target to generate assembly for a file
-qr/qr_finding_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.s
-.PHONY : qr/qr_finding_1.cpp.s
+aruco/aruco1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.s
+.PHONY : aruco/aruco1.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... robot_vision"
-	@echo "... qr/qr_finding_1.o"
-	@echo "... qr/qr_finding_1.i"
-	@echo "... qr/qr_finding_1.s"
+	@echo "... aruco/aruco1.o"
+	@echo "... aruco/aruco1.i"
+	@echo "... aruco/aruco1.s"
 .PHONY : help
 
 

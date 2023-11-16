@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/qr/qr_finding_1.cpp" "CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o" "gcc" "CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o.d"
+  "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp" "CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o" "gcc" "CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,8 +1,8 @@
 [
 {
   "directory": "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -isystem /usr/local/Cellar/opencv/4.8.0_2/include/opencv4 -g -std=gnu++14 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o -c \"/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/qr/qr_finding_1.cpp\"",
-  "file": "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/qr/qr_finding_1.cpp",
-  "output": "CMakeFiles/robot_vision.dir/qr/qr_finding_1.cpp.o"
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -isystem /usr/local/Cellar/opencv/4.8.0_2/include/opencv4 -g -std=gnu++14 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o -c \"/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp\"",
+  "file": "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp",
+  "output": "CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o"
 }
 ]
