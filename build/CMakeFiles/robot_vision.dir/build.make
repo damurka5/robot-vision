@@ -69,28 +69,28 @@ include CMakeFiles/robot_vision.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/robot_vision.dir/flags.make
 
-CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o: CMakeFiles/robot_vision.dir/flags.make
-CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o: /Users/damirnurtdinov/Desktop/My\ Courses/Диплом/robot_vision/aruco/aruco1.cpp
-CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o: CMakeFiles/robot_vision.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o -MF CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o.d -o CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o -c "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp"
+CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o: CMakeFiles/robot_vision.dir/flags.make
+CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o: /Users/damirnurtdinov/Desktop/My\ Courses/Диплом/robot_vision/aruco/getCoordinates.cpp
+CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o: CMakeFiles/robot_vision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o -MF CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o.d -o CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o -c "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/getCoordinates.cpp"
 
-CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp" > CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.i
+CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/getCoordinates.cpp" > CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.i
 
-CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp" -o CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.s
+CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/getCoordinates.cpp" -o CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.s
 
 # Object files for target robot_vision
 robot_vision_OBJECTS = \
-"CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o"
+"CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o"
 
 # External object files for target robot_vision
 robot_vision_EXTERNAL_OBJECTS =
 
-robot_vision: CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o
+robot_vision: CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o
 robot_vision: CMakeFiles/robot_vision.dir/build.make
 robot_vision: /usr/local/lib/libopencv_gapi.4.8.0.dylib
 robot_vision: /usr/local/lib/libopencv_highgui.4.8.0.dylib

@@ -129,29 +129,29 @@ robot_vision/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/build
 .PHONY : robot_vision/fast
 
-aruco/aruco1.o: aruco/aruco1.cpp.o
-.PHONY : aruco/aruco1.o
+aruco/getCoordinates.o: aruco/getCoordinates.cpp.o
+.PHONY : aruco/getCoordinates.o
 
 # target to build an object file
-aruco/aruco1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o
-.PHONY : aruco/aruco1.cpp.o
+aruco/getCoordinates.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o
+.PHONY : aruco/getCoordinates.cpp.o
 
-aruco/aruco1.i: aruco/aruco1.cpp.i
-.PHONY : aruco/aruco1.i
+aruco/getCoordinates.i: aruco/getCoordinates.cpp.i
+.PHONY : aruco/getCoordinates.i
 
 # target to preprocess a source file
-aruco/aruco1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.i
-.PHONY : aruco/aruco1.cpp.i
+aruco/getCoordinates.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.i
+.PHONY : aruco/getCoordinates.cpp.i
 
-aruco/aruco1.s: aruco/aruco1.cpp.s
-.PHONY : aruco/aruco1.s
+aruco/getCoordinates.s: aruco/getCoordinates.cpp.s
+.PHONY : aruco/getCoordinates.s
 
 # target to generate assembly for a file
-aruco/aruco1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.s
-.PHONY : aruco/aruco1.cpp.s
+aruco/getCoordinates.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.s
+.PHONY : aruco/getCoordinates.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... robot_vision"
-	@echo "... aruco/aruco1.o"
-	@echo "... aruco/aruco1.i"
-	@echo "... aruco/aruco1.s"
+	@echo "... aruco/getCoordinates.o"
+	@echo "... aruco/getCoordinates.i"
+	@echo "... aruco/getCoordinates.s"
 .PHONY : help
 
 

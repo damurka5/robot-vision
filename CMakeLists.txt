@@ -10,6 +10,6 @@ include_directories( ${OpenCV_INCLUDE_DIRS})
 #         utils/StereoImageProcessing.cpp
 #         utils/StereoImageProcessing.h
 #         )
-add_executable(robot_vision aruco/aruco1.cpp)
+add_executable(robot_vision aruco/getCoordinates.cpp)
 
 target_link_libraries( robot_vision  ${OpenCV_LIBS})

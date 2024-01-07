@@ -143,59 +143,32 @@ robot_vision/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/build
 .PHONY : robot_vision/fast
 
-main.o: main.cpp.o
+aruco/aruco1.o: aruco/aruco1.cpp.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-utils/StereoImageProcessing.o: utils/StereoImageProcessing.cpp.o
-
-.PHONY : utils/StereoImageProcessing.o
+.PHONY : aruco/aruco1.o
 
 # target to build an object file
-utils/StereoImageProcessing.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.o
-.PHONY : utils/StereoImageProcessing.cpp.o
+aruco/aruco1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o
+.PHONY : aruco/aruco1.cpp.o
 
-utils/StereoImageProcessing.i: utils/StereoImageProcessing.cpp.i
+aruco/aruco1.i: aruco/aruco1.cpp.i
 
-.PHONY : utils/StereoImageProcessing.i
+.PHONY : aruco/aruco1.i
 
 # target to preprocess a source file
-utils/StereoImageProcessing.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.i
-.PHONY : utils/StereoImageProcessing.cpp.i
+aruco/aruco1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.i
+.PHONY : aruco/aruco1.cpp.i
 
-utils/StereoImageProcessing.s: utils/StereoImageProcessing.cpp.s
+aruco/aruco1.s: aruco/aruco1.cpp.s
 
-.PHONY : utils/StereoImageProcessing.s
+.PHONY : aruco/aruco1.s
 
 # target to generate assembly for a file
-utils/StereoImageProcessing.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/utils/StereoImageProcessing.cpp.s
-.PHONY : utils/StereoImageProcessing.cpp.s
+aruco/aruco1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.s
+.PHONY : aruco/aruco1.cpp.s
 
 # Help Target
 help:
@@ -206,12 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... robot_vision"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... utils/StereoImageProcessing.o"
-	@echo "... utils/StereoImageProcessing.i"
-	@echo "... utils/StereoImageProcessing.s"
+	@echo "... aruco/aruco1.o"
+	@echo "... aruco/aruco1.i"
+	@echo "... aruco/aruco1.s"
 .PHONY : help
 
 

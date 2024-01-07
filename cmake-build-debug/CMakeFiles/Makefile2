@@ -94,12 +94,12 @@ clean: CMakeFiles/robot_vision.dir/clean
 CMakeFiles/robot_vision.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_vision.dir/build.make CMakeFiles/robot_vision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles" --progress-num=1,2,3 "Built target robot_vision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target robot_vision"
 .PHONY : CMakeFiles/robot_vision.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/robot_vision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_vision.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/robot_vision.dir/rule
