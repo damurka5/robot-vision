@@ -12,7 +12,7 @@ using namespace std;
 // exploration of https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html
 
 int main() {
-    float markerLength = 0.05;
+    float markerLength = 28;
     float intrinsicMat[3][3] = {{886.45390975, 0.0, 346.18649671},
                                 {0.0, 885.64408409, 669.6104976},
                                 {0, 0, 1}};
@@ -38,12 +38,19 @@ int main() {
     cv::aruco::ArucoDetector detector(dictionary, detectorParams);
 
     detector.detectMarkers(inputImage, markerCorners, markerIds, rejectedCandidates);
-    cout<<markerCorners.size()<<"\n";
+    // cout<<markerCorners.size()<<"\n";
     int nMarkers = markerCorners.size();
     std::vector<cv::Vec3d> rvecs(nMarkers), tvecs(nMarkers);
+    cv::Mat R;
     // Calculate pose for each marker
     for (int i = 0; i < nMarkers; i++) {
         solvePnP(objPoints, markerCorners.at(i), cameraMatrix, distMatrix, rvecs.at(i), tvecs.at(i));
+        std::cout<<"rvec: ";
+        cv::Rodrigues(rvecs.at(i), R);
+        std::cout<<R<<"\n";
+
+        std::cout<<"tvec: ";
+        std::cout<<tvecs.at(i)<<"\n";
     }
 
     inputImage.copyTo(outputImage);
