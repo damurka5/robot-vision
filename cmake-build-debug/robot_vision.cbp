@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp">
+		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/getCoordinates.cpp">
 			<Option target="robot_vision"/>
 		</Unit>
 		<Unit filename="/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/CMakeLists.txt">

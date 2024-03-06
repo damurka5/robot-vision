@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/aruco1.cpp" "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o"
+  "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/aruco/getCoordinates.cpp" "/Users/damirnurtdinov/Desktop/My Courses/Диплом/robot_vision/cmake-build-debug/CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robot_vision.dir/aruco/aruco1.cpp.o"
+  "CMakeFiles/robot_vision.dir/aruco/getCoordinates.cpp.o"
   "robot_vision"
   "robot_vision.pdb"
 )

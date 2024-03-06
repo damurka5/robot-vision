@@ -9,67 +9,57 @@
 using namespace cv;
 using namespace std;
 
-Mat imgGray, imgBlurL, imgBlurR, imgCannyL, imgCannyR, imgDilL, imgDilR, imgErode;
-Mat imgEdged, maskL, maskR;
-
-int canny_threshold1 = 200;
-
 
 int main() {
-    string path1 = "../resources/left_pic4.jpg";
-    string path2 = "../resources/middle_pic4.jpg";
-    Mat imgL = imread(path1);
-    Mat imgR = imread(path2);
-    int img_height = 960;  // px
-    int img_weight = 1280;  // px
+    cv::VideoCapture inputVideo(0);
+    float markerLength = 0.05;
+    // You can read camera parameters from tutorial_camera_params.yml
+    float intrinsicMat[3][3] = {{2.36308422e+03, 0.0, 9.46684665e+02},
+                                {0.0, 2.28733771e+03, 2.87930582e+02},
+                                {0, 0, 1}};
+    float distMat[5] = {0.83953412, -10.9281040,  -0.02852879,   0.03361264,  26.40532812};
+    cv::Mat cameraMatrix = cv::Mat(3,3, CV_32FC1, &intrinsicMat);
+    cv::Mat distMatrix = cv::Mat(1,5, CV_32FC1, &distMat);
+    // Set coordinate system
+    cv::Mat objPoints(4, 1, CV_32FC3);
+    objPoints.ptr<cv::Vec3f>(0)[0] = cv::Vec3f(-markerLength/2.f, markerLength/2.f, 0);
+    objPoints.ptr<cv::Vec3f>(0)[1] = cv::Vec3f(markerLength/2.f, markerLength/2.f, 0);
+    objPoints.ptr<cv::Vec3f>(0)[2] = cv::Vec3f(markerLength/2.f, -markerLength/2.f, 0);
+    objPoints.ptr<cv::Vec3f>(0)[3] = cv::Vec3f(-markerLength/2.f, -markerLength/2.f, 0);
+    cv::aruco::DetectorParameters detectorParams = cv::aruco::DetectorParameters();
+    cv::aruco::Dictionary dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250);
+    aruco::ArucoDetector detector(dictionary, detectorParams);
 
-    float f = 26;  // focal length in mm (camera of iPhone 13)
-    float b_x = 100; // baseline in mm
+    cv::Mat imageUndistorted;
+    while (true) {
+        cv::Mat image, imageCopy;
+        inputVideo.read(image);
+        image.copyTo(imageCopy);
+        cv::undistort(image, imageUndistorted, cameraMatrix, distMatrix);
+        std::vector<int> ids;
+        std::vector<std::vector<cv::Point2f>> corners;
+        detector.detectMarkers(imageCopy, corners, ids);
+        // If at least one marker detected
+        if (ids.size() > 0) {
+            cv::aruco::drawDetectedMarkers(imageCopy, corners, ids);
+            int nMarkers = corners.size();
+            std::vector<cv::Vec3d> rvecs(nMarkers), tvecs(nMarkers);
+            // Calculate pose for each marker
+            for (int i = 0; i < nMarkers; i++) {
+                solvePnP(objPoints, corners.at(i), cameraMatrix, distMatrix, rvecs.at(i), tvecs.at(i));
+            }
+            // Draw axis for each marker
+            for(unsigned int i = 0; i < ids.size(); i++) {
+                cv::drawFrameAxes(imageCopy, cameraMatrix, distMatrix, rvecs[i], tvecs[i], 0.1);
+            }
+        }
+        // Show resulting image and close window
+        cv::imshow("out", imageUndistorted);
+        char key = (char) cv::waitKey(1);
+        if (key == 27)
+            break;
+    }
 
-    vector<Mat> channels;
-    Mat hsvL, hsvR;
-    cvtColor(imgL, hsvL, COLOR_BGR2HSV);
-    cvtColor(imgR, hsvR, COLOR_BGR2HSV);
 
-    Scalar lower(16, 0, 0);
-    Scalar upper(175, 255, 255); // 175, 255, 255
-    inRange(hsvL, lower, upper, maskL);
-    inRange(hsvR, lower, upper, maskR);
-
-    canny_threshold1 = 200; // empirically
-
-    imgDilL = StereoImageProcessing::applyDilation(maskL, imgDilL, canny_threshold1, 3*canny_threshold1, 7,5);
-    imgDilR = StereoImageProcessing::applyDilation(maskR, imgDilR, canny_threshold1, 3*canny_threshold1, 7,5);
-    Point pLeft = StereoImageProcessing::getContourOfObj(imgDilL, imgL);
-    Point pRight = StereoImageProcessing::getContourOfObj(imgDilR, imgR);
-
-    imshow("Image Left", imgL);
-    imshow("Image Right", imgR);
-    cout << "Left x: " << pLeft.x << " Left y: " << pLeft.y << "\n";
-    cout << "Right x: " << pRight.x << " Right y: " << pRight.y << "\n";
-
-    float alpha = 0.0590909; // coefficient to get disparity
-    float disparity = pLeft.x - pRight.x;
-
-    float depth = (float) f*b_x /( (float) alpha*disparity);
-    cout<<"Depth is: "<<depth;
-
-    // disparity map calculations
-    imgL = imread(path1);
-    imgR = imread(path2);
-    Mat disparityMap, imgGrayL, imgGrayR;
-    Mat different_ChannelsL[3];
-    Mat different_ChannelsR[3];
-    Ptr<StereoBM> sbm = StereoBM::create( 16*8, 35);
-//    cvtColor(imgL, imgGrayL, COLOR_BGR2GRAY);
-//    cvtColor(imgR, imgGrayR, COLOR_BGR2GRAY);
-
-    split(imgL, different_ChannelsL);
-    split(imgR, different_ChannelsR);
-
-    sbm->compute(different_ChannelsL[1], different_ChannelsR[1], disparityMap);
-    imshow("Disparity", disparityMap);
-
-    waitKey(0);
 }
 
